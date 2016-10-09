@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.github.forevery.wegallery.FantasyDrawerLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/drawerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.CardView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="3dp"
+            app:cardMaxElevation="1dp"
+            app:cardUseCompatPadding="true">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/index"/>
+
+        </android.support.v7.widget.CardView>
+
+
+        <com.github.forevery.wegallery.SideBar
+            android:id="@+id/leftSideBar"
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:background="@color/colorPrimary"
+            android:gravity="center_vertical"
+            app:maxTranslationX="66dp">
+
+            <LinearLayout
+                android:id="@+id/userInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                android:gravity="center_horizontal"
+                android:onClick="onClick"
+                android:orientation="vertical">
+
+                <com.github.forevery.wegallery.widget.CircleImageView
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:layout_margin="10dp"
+                    android:src="@drawable/my"
+                    app:civ_border_color="@color/menu_text_color"
+                    app:civ_border_width="2dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="我们"
+                    android:textColor="@color/menu_text_color"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <TextView
+                style="@style/MenuText"
+                android:drawableLeft="@drawable/circle"
+                android:text="包头"/>
+
+            <TextView
+                style="@style/MenuText"
+                android:drawableLeft="@drawable/wallet"
+                android:text="集宁" />
+
+            <TextView
+                style="@style/MenuText"
+                android:drawableLeft="@drawable/coupon"
+                android:text="气质美女" />
+
+            <TextView
+                style="@style/MenuText"
+                android:drawableLeft="@drawable/friends"
+                android:text="小美女" />
+
+            <TextView
+                style="@style/MenuText"
+                android:drawableLeft="@drawable/settings"
+                android:text="我们" />
+        </com.github.forevery.wegallery.SideBar>
+
+        <com.github.forevery.wegallery.SideBar
+            android:id="@+id/rightSideBar"
+            android:layout_width="133dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:background="@drawable/bg_right_bar"
+            android:gravity="center_vertical|right"
+            app:maxTranslationX="-33dp">
+
+            <TextView
+                style="@style/MenuText"
+                android:text="星期一" />
+
+            <TextView
+                style="@style/MenuText"
+                android:text="星期二" />
+
+            <TextView
+                style="@style/MenuText"
+                android:text="星期三" />
+
+            <TextView
+                style="@style/MenuText"
+                android:text="星期四" />
+
+            <TextView
+                style="@style/MenuText"
+                android:text="星期五" />
+
+            <TextView
+                style="@style/MenuText"
+                android:text="星期六" />
+
+            <TextView
+                style="@style/MenuText"
+                android:text="星期日" />
+        </com.github.forevery.wegallery.SideBar>
+    </com.github.forevery.wegallery.FantasyDrawerLayout>
+
+</RelativeLayout>
